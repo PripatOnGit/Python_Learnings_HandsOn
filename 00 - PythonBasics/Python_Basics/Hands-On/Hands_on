@@ -1,0 +1,150 @@
+
+#Write a Python program that takes a user's age as input and prints "You are a minor" if the age is less than 18, 
+#otherwise, it should print "You are an adult."
+age = int(input("Enter age: "))
+if(age > 18):
+    print("You are adult")
+else:
+    print("You are minor")
+    
+#Create a Python program that checks if a given number is positive, negative, or zero and prints an appropriate message. 
+num = int(input("Enter Number: "))   
+if(num>0):
+    print(f"{num} is positive")
+elif(num==0):
+    print("ZERO")
+else:
+    print(f"{num} is negetive")
+    
+#Write a program that determines whether a given year is a leap year or not. 
+#(A leap year is divisible by 4, except for years that are divisible by 100 but not by 400.)
+year = int("Enter a year: ")
+if(len(year) != 4):
+    print("Enter Valid year")
+else:
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                print(f"{year} is a leap year")
+            else:
+                print(f"{year} is not a leap year")
+        else:
+            print(f"{year} is a leap year")
+    else:
+        print(f"{year} is not a leap year")
+    
+#Develop a Python program that calculates the grade for a student based on their exam score. 
+#Use the following grading scale: A (90-100), B (80-89), C (70-79), D (60-69), F (0-59).
+grade = int(input("Enter grade: "))
+if(grade>0 and grade<59):
+    print("Grade F")
+elif(60 < grade >69):
+    print("Grade D")
+elif(70 < grade > 79):
+    print("Grade C")
+elif(80 < grade > 89):
+    print("Grade B")
+else(90 < grade > 100):
+    print("Grade A")
+
+#Write a program that takes three numbers as input and prints the largest among them.
+num1 = int(input("Enter number 1: "))
+num2 = int(input("Enter number 2: "))
+num3 = int(input("Enter number 3: "))
+if (num1 >= num2) and (num1 >= num3):
+   largest = num1
+elif (num2 >= num1) and (num2 >= num3):
+   largest = num2
+else:
+   largest = num3
+print("The largest number is", largest)
+
+
+#Implement a Python program that simulates a simple ATM.
+#It should ask the user for their current balance and a withdrawal amount. 
+#If the withdrawal amount is greater than the balance, display an error message; otherwise, deduct the withdrawal amount from the balance and display the updated balance.
+balance = int(input("Enter your balance: "))
+amount = int(input("Enter your withdrawl amount: "))
+if(amount <= balance):
+    current_bal = balance - amount
+    print(f"Balance is {current_bal} rupees.")
+else:
+    print("Not enough money!!")
+    
+    
+
+#Develop a program that calculates the cost of shipping based on the weight of a package. 
+#If the weight is less than or equal to 2 kg, the cost is $5. If the weight is between 2 kg and 10 kg (inclusive), the cost is $10. Otherwise, the cost is $20.
+wt = int(input("Enter weight of package: "))
+shipping_cost = 0
+if(wt<=2):
+    return shipping_cost = $5
+elif(2 < wt >=10):
+    return shipping_cost = $10
+else:
+    return shipping_cost = $20
+
+
+
+
+#Create a Python program that checks whether a given character is a vowel or a consonant.
+#Assume the input is a single character
+ls = ['a','e','i','o','u']
+letter = input("Enter Letter to know if ir is vowel or consonents: ")
+for pan in ls:
+    if(letter == pan):
+        print(f"{ls} is Vowel")
+    else:
+        print(f"{ls} is consonent")
+
+#Write a Python program that determines if a given number is prime or not. 
+#A prime number is a positive integer greater than 1 that has no divisors other than 1 and itself.
+num = int(input("Enter number: "))
+pointer = False
+
+if num == 1:
+    print(num, "is not a prime number")
+elif num > 1:
+    for i in range(2, num):
+        if (num % i) == 0:
+            pointer = True
+            break
+
+if pointer:
+    print(num, "is not a prime number")
+else:
+    print(num, "is a prime number")
+    
+    
+    
+#Create a program that takes a month (as a number) as input and prints the corresponding month's name. 
+#Ensure your program handles invalid input gracefully.
+x = int(input("Enter the month number: "))
+if(1>x>12):
+    print("Invalid month number")
+else:
+    if (x==1):
+        print ("Jan")
+    elif(x==2):
+        print("Feb")
+    elif(x==3):
+        print("March")
+    elif(x==4):
+        print("April")
+    elif(x==5):
+        print("May")
+    elif(x==6):
+        print("June")
+    elif(x==7):
+        print("July")
+    elif(x==8):
+        print("August")
+    elif(x==9):
+        print("September")
+    elif(x==10):
+        print("October")
+    elif(x==11):
+        print("November")
+    else(x==12):
+        print("December")
+
