@@ -26,7 +26,7 @@ for num in range(0,100):
     else:
         print(f"{num} is Odd")
 
-#==========================================================
+#===========================================================
 num=0
 while(num<100):
     if(num%2==0):
@@ -73,7 +73,21 @@ ls = []
 list7 = [ls.append(letter[0]) for letter in str.split()]
 print(ls)
 
-
+#==================================================================================
+str = "priyanka patil"
+i = 0
+for x in range(len(str)):
+    print(f"{i} at the index {x} is present")
+    i+=1
+    
+    
+str1 = "priyanka patil"
+ls = str1.split()
+index = 0
+print(ls)
+for letter in ls:
+    print(f"{index} is present {letter}")
+    index+=1
 
 
 
