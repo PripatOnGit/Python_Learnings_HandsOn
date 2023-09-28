@@ -95,3 +95,175 @@ def sq_num():
 sq_num()
 
 #==============================================================================
+
+#given list check if 3 is present before any 3
+
+list10 = [1,3,3,5,6,3,3]
+for i in range(len(list10)):
+    if list10[i:i+1] == [3,3]:
+        print(i," ",i+1)
+
+
+
+#===============================================================
+## map function
+
+#create normal function 
+def myfunc(a):
+    return (a**2)
+
+ls = [1,2,3,4,5]
+ 
+for item in map(myfunc,ls):
+    print(item)
+
+
+#=================================================================
+
+#create list of even numbers using map function and given list
+
+def check_even(num):
+    if (num%2==0):
+        return num
+    else:
+        pass
+
+ls = [1,5,7,9,3,4,6,2,9,10,45,77,146,39,6752,67873,275082758250]
+
+even_list = list(filter(check_even,ls))
+print(even_list) 
+
+
+
+#=================================
+
+#lambda function
+def sqaure(num):
+    return num**2
+
+#lambda
+
+sq = lambda num : num ** 2 
+print(f"sq is: {sq(5)}")
+
+#==================================
+
+def myfunc(a):
+    return (a**2)
+
+ls = [1,2,3,4,5]
+ 
+sq_list = list(map(myfunc, ls))
+print(sq_list)
+
+#===========================================================================
+#count number of uppercase letters and lowercase letters
+
+str = "How many LoweCase Letters and Uppercase letters are there in String"
+def count(str):
+    u_count = 0
+    l_count = 0
+    for ch in str:
+        if(ch.isupper()):
+            u_count +=1
+        elif(ch.islower()):
+            l_count +=1
+        else:
+            pass
+
+    print(f"Uppercase letters: {u_count}")
+    print(f"Lowercase letters: {l_count}")
+
+count(str)
+
+#=======================================================
+#using dictionary
+
+str = "How many LoweCase Letters and Uppercase letters are there in String"
+def count(str):
+    d = {'u_count': 0, 'l_count' : 0}
+    for ch in str:
+        if(ch.isupper()):
+            d['u_count'] +=1
+        elif(ch.islower()):
+            d['l_count'] +=1
+        else:
+            pass
+
+    print(f"Uppercase letters: {d['u_count']}")
+    print(f"Lowercase letters: {d['l_count']}")
+
+count(str)
+
+#=======================================================================
+
+#find unique elements from list
+
+ls = [1,3,4,5,2,3,8,4,5,2,9,1,7,3,9]
+
+seen_num_list = []
+def unique_list(lst):
+    for num in lst:
+        if num not in seen_num_list:
+            seen_num_list.append(num)
+        else:
+            pass
+    return seen_num_list
+
+unique_list = unique_list(ls)
+print(unique_list)
+
+
+#==============================================
+
+#multiply all numbers in list
+
+ls = [1,2,3,4,5]
+prod = 1
+for num in range(len(ls)):
+    prod = prod * ls[num]
+
+#================================================
+#word is pallindrom or not
+flag = True
+def check_pallindrom(str):
+    for ch in range(0,int(len(str)/2)):
+        if(str[ch] == str[len(str)-ch-1]):
+            flag = True
+        else:
+            flag = False
+
+    if(flag == True):
+        print("Pallindrom")
+    else:
+        print("Not a pallindrom")
+
+check_pallindrom("anna")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
