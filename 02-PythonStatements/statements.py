@@ -89,6 +89,16 @@ for letter in ls:
     print(f"{index} is present {letter}")
     index+=1
 
+#========================================================================
+def printCategory(age):
+    if age > 18:
+        print('Adult')
+    elif age > 65:
+        print('Senior Citizen')
+    else:
+        print('Child')
+
+printCategory(70)
 
 
 
